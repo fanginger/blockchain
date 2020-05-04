@@ -1,6 +1,21 @@
-
 # BlockChain_HW
 
 > Hi! My name is Ginger.Nice to meet you.:satisfied: 
 
-# 第二次作業請看HW裡面的hw2.sol 謝謝～ 
+# 每週進度與筆記
+
+
+## Week2 and Week3
+> 區塊鏈介紹
+
+## Week4
+> 智能合約說明
+> Solidity 語法
+
+## Week6
+> Solidity 語法
+
+## Week7 and Week8
+> 幣圈、鏈圈生態、自主身份認證、KYC
+> 遠端連線伺服器筆記 
+> 
