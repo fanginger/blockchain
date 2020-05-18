@@ -1,0 +1,64 @@
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+
+  <div class="outer narrow">
+    <header><h2>最新消息</h2></header>
+    <div class="upper">
+      <div><img src="images/1.jpg"></div>
+      <div><img src="images/2.jpg"></div>
+      <div><img src="images/3.jpg"></div>
+      <div><img src="images/6.jpg"></div>
+      <div><img src="images/5.jpg"></div>
+      
+    </div>
+    <header><h2>熱門活動</h2></header>
+    <div class="upper">
+      <div><img src="images/1.jpg">哇嗚嗚熱門活動</div>
+      <div><img src="images/2.jpg">未來會有的活動</div>
+      <div><img src="images/4.jpg">哇嗚嗚熱門活動</div>
+      <div><img src="images/5.jpg">就是要和上面區別</div>
+      <div><img src="images/3.jpg">詞窮想不到了</div>
+      
+    </div>
+    
+  </div>
+  <style>
+    .outer{
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+    .upper{
+      width: 80%;
+    }
+    img{
+      max-height: 50vh;
+      max-width: 40vh;
+    }
+  </style>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.upper').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+    });
+  </script>
+
+
+  </body>
+</html>
