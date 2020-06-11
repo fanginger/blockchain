@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>wallet</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+	</head>
+	<body>
+  <header id="header" class="skel-layers-fixed">
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="wallet.html">My_wallet</a></li>
+					<li><a href="pay.html">GOPAY</a></li>
+					<li><a href="login.html">Login</a></li>
+					<li><a href="login.html">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+		<script src="js/req_balance.js"></script>
+		<script>
+			get_balance_by_user("https://backend.scoingroup.link/get_balance?user=tzu");
+		</script>
+
+        <!-- mywallet -->
+        <section id="two" class="wrapper style special">
+            <div class="inner narrow">
+                <header>
+                    <h2>目前金額</h2>
+                    <div id="balance"></div>
+                </header>
+                
+                <form class="grid-form" method="post" action="#">
+                  <div class="feature feature2">
+                    <a href="pay.html" style="text-decoration:none;color:gray;">轉帳 </a> 
+                  </div>
+                  <div class="feature feature2">
+                      <p id="clickpay">條碼</p>
+                  </div>          
+              </form>
+              <h3>近期交易紀錄</h3>
+              <form class='trans_form' method="post" >
+
+              <div class="transaction">
+                <div class="icon-type">
+                  <div class="icon"></div>
+                </div>
+                <div class="description">
+                  <div class="info">
+                    <h3>蔡老師 </h3>
+                    <span>范同學太棒ㄌ！HW6滿分</span>
+
+                    -<span>11 July, 2015</span>
+                  </div>
+                  <div class="info">
+                    <h3>+ 10 東吳幣</h3>
+                    <span class='status'>交易成功</span>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="transaction">
+                <div class="icon-type">
+                  <div class="icon"></div>
+                </div>
+                <div class="description">
+                  <div class="info">
+                    <h3>蔡老師 </h3>
+                    <span>楊同學太棒ㄌ！HW6滿分</span>
+
+                    -<span>11 July, 2015</span>
+                  </div>
+                  <div class="info">
+                    <h3>+ 10 東吳幣</h3>
+                    <span class='status'>交易成功</span>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="transaction">
+                <div class="icon-type">
+                  <div class="icon"></div>
+                </div>
+                <div class="description">
+                  <div class="info">
+                    <h3>蔡老師 </h3>
+                    <span>范同學太棒ㄌ！HW6滿分</span>
+                    -<span>11 July, 2015</span>
+                    
+                  </div>
+                  <div class="info">
+                    <h3>+ 10 東吳幣</h3>
+                    <span class='status'>交易失敗</span>
+                    
+                  </div>
+
+                </div>
+              </div>
+              
+
+            </form>
+            </div>
+        </section>
+        <style>
+          .trans_form{
+            width: 90%;
+          }
+          
+          .transaction {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          padding: 20px 0;
+          }
+          .description {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            color: rgb(162, 161, 161);
+          }
+          .info h3{
+            display: block;
+            width: 100%;
+            margin: 0 0 10px;
+            color: rgb(72, 72, 72);
+            font-size: 18px;
+          }
+          /* #status{
+            color: rgb(63, 148, 63);
+          } */
+        </style>
+
+
+
+
+    <!-- Scripts -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="assets/js/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                  $("#click_recieve").click(function(){
+                        $("#recieve_by").fadeToggle();
+                    });
+                    // $("#clickpay").click(function(){
+                    //     $("#password").fadeToggle();
+                    // });
+                    // $("#aboutme").click(function(){
+                    //     $("#aboutme_detail").fadeToggle();
+                    // });
+                  len = document.getElementsByClassName('status').length;
+                  element = document.getElementsByClassName('status')
+                    
+                  for(var i=0 ; i<len; i++){
+                    console.log(element[i].innerHTML)
+                        if('交易成功' == document.getElementsByClassName('status')[i].innerHTML){
+
+                        document.getElementsByClassName('status')[i].style.color='rgb(63, 148, 63)'
+                      }
+                      else{
+                        document.getElementsByClassName('status')[i].style.color="red"
+                      }
+                  }
+                  // if('交易成功' in element)
+                  // {
+
+                  //   document.getElementsByClassName('status')[0].style.color='rgb(63, 148, 63)'
+                  // }
+                  // else{
+                  //   document.getElementsByClassName('status')[0].style.color="red"
+                  // }
+              
+                });
+                
+            </script>
+           
+			
+	</body>
+</html>
